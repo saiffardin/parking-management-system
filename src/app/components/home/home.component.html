@@ -2,6 +2,11 @@
 
 <modal-form-info></modal-form-info>
 
+<div class="parentNewRow">
+
+    <button mat-button color="primary" class="addNewRow" (click)="addNewRow()">Add New Vehicle Info</button>
+</div>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.

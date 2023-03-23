@@ -53,4 +53,8 @@ export class HomeComponent implements OnInit {
       this.dataSource = value;
     });
   }
+
+  addNewRow() {
+    console.log('addNewRow');
+  }
 }

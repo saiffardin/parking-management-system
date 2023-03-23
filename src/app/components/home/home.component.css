@@ -1,3 +1,18 @@
 table {
     width: 100%;
 }
+
+.parentNewRow {
+    display: flex;
+    justify-content: center;
+}
+
+.addNewRow {
+    width: 100%;
+    margin: 10px;
+    font-size: larger;
+}
+
+.addNewRow:hover {
+    background-color: lightgray;
+}

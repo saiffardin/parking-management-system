@@ -15,6 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ModalFormInfoComponent } from './components/modal-form-info/modal-form-info.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     MatTableModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
