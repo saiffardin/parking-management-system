@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ModalFormInfoComponent } from './modal-form-info/modal-form-info.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HomeComponent,
     DashboardComponent,
     NavBarComponent,
+    ModalFormInfoComponent,
   ],
   imports: [
     BrowserModule,
