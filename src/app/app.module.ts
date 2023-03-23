@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
@@ -24,6 +25,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
