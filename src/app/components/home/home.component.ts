@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+// export interface PeriodicElement {
+export interface IVehicle {
+  licenseNum: string;
+  vehicleType: string;
+  ownerName: string;
+  entryTime: string;
+  exitTime: string;
+  status: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: any[] = [
   { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
   { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
   { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -26,10 +30,23 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = [
+    'licenseNum',
+    'vehicleType',
+    'ownerName',
+    'entryTime',
+    'exitTime',
+    'status',
+    // 'action',
+  ];
+  // dataSource = ELEMENT_DATA;
+  dataSource = [];
 
-  constructor() {}
+  constructor(private _localStorageService: LocalStorageService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let resultArr = this._localStorageService.getItemFromLocalStorage();
+    console.log('resultArr:', resultArr);
+    this.dataSource = resultArr;
+  }
 }
