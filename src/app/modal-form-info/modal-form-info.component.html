@@ -1,1 +1,57 @@
 <p>modal-form-info works!</p>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <!-- licenseNum -->
+    <p>
+        <label for="licenseNum">License No. </label>
+        <input type="text" id="licenseNum" name="licenseNum" formControlName="licenseNum">
+    </p>
+
+
+    <!-- vehicleType -->
+    <p>
+        <label for="vehicleType">Vehicle Type </label>
+
+        <select id="vehicleType" name="vehicleType" formControlName="vehicleType">
+            <option value="microbus">Microbus</option>
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+        </select>
+    </p>
+
+    <!-- ownerName -->
+    <p>
+        <label for="ownerName">Owner Name </label>
+        <input type="text" id="ownerName" name="ownerName" formControlName="ownerName">
+    </p>
+
+    <!-- entryTime -->
+    <p>
+        <label for="entryTime">Entry Time </label>
+        <input type="time" id="entryTime" name="entryTime" formControlName="entryTime">
+    </p>
+
+    <!-- exitTime -->
+    <p>
+        <label for="exitTime">Exit Time </label>
+        <input type="time" id="exitTime" name="exitTime" formControlName="exitTime">
+    </p>
+
+
+    <!-- status -->
+    <p>
+        <label for="status">Status</label>
+
+        <select id="status" name="status" formControlName="status">
+            <option value="in">In</option>
+            <option value="out">Out</option>
+        </select>
+    </p>
+
+    <!-- SUBMIT -->
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+
+</form>
