@@ -1,12 +1,12 @@
 <!-- <p>nav-bar works!</p> -->
 
 <mat-toolbar class="custom-navbar">
-   
+
     <span>Parking Management System</span>
     <span class="example-spacer"></span>
 
-    <span class="custom-nav-link">Home</span>
-    <span class="custom-nav-link">Dashboard</span>
+    <span class="custom-nav-link" (click)="changeRoute('/')">Home</span>
+    <span class="custom-nav-link" (click)="changeRoute('/dashboard')">Dashboard</span>
 
-    
+
 </mat-toolbar>
