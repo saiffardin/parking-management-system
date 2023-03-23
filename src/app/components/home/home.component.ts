@@ -48,5 +48,9 @@ export class HomeComponent implements OnInit {
     let resultArr = this._localStorageService.getItemFromLocalStorage();
     console.log('resultArr:', resultArr);
     this.dataSource = resultArr;
+
+    this._localStorageService.recordsSubject.subscribe((value: any) => {
+      this.dataSource = value;
+    });
   }
 }

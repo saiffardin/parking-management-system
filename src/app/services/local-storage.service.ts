@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocalStorageService {
   KEY = 'selise';
+  recordsSubject = new Subject<any>();
 
   constructor() {}
 
@@ -13,6 +15,7 @@ export class LocalStorageService {
     resultArr = [...resultArr, item];
 
     localStorage.setItem(this.KEY, JSON.stringify(resultArr));
+    this.recordsSubject.next(resultArr);
   }
 
   getItemFromLocalStorage() {
